@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卡牌翻轉遊戲</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="start-screen">
+        <label for="theme-select">選擇主題：</label>
+        <select id="theme-select">
+            <option value="onepiece">海賊王</option>
+            <option value="historical">歷史人物</option>
+        </select>
+        <label for="grid-size-select">選擇網格大小：</label>
+        <select id="grid-size-select">
+            <option value="2x2">2X2</option>
+            <option value="4x4">4X4</option>
+            <option value="6x6">6X6</option>
+        </select>
+        <label for="countdown-input">倒數秒數：</label>
+        <input type="number" id="countdown-input" value="3" min="1" max="10"> <!-- 使用者輸入倒數秒數 -->
+        <button id="start-game">開始遊戲</button>
+    </div>
+    
+    <div id="game-screen" style="display: none;">
+        <div class="button-container">
+            <div id="timer-display"></div>
+            <div id="best-time-display"></div> <!-- 新增最佳挑戰時間顯示 -->
+            <button id="reset-cards">返回開始畫面</button>
+        </div>
+        <div id="card-container" class="card-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
